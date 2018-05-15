@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conutdown</title>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<form id="frm">Seconds:
+    <input type="text" id="seconds" name="seconds" value="0" size="2" maxlength="2" />
+    <br/>
+    <input type="button" id="btnct" value="Input" />
+</form>
+<span id="timespan"></span>
+
+<input type="button" value="Start" onclick="countdown()">
+<input type="button" value="Stop" onclick="cdpause()">
+<input type="button" value="Reset" onclick="cdreset()">
+</body>
+</html>
