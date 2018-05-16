@@ -1,21 +1,20 @@
 var CCOUNT;
 $(document).ready(function () {
     $('#btnct').click(function () {
-        CCOUNT = $('#seconds').val();
+        CCOUNT = $('#secondes').val();
         cdreset();
     });
 });
 var t, count;
 
 function cddisplay() {
-    document.getElementById('timespan').innerHTML = count;
+    document.getElementById('decompte').innerHTML = count;
 }
 
 function countdown() {
-    // starts countdown
     cddisplay();
     if (count === 0) {
-        // time is up
+        document.getElementById('decompte').innerHTML = 'Le temps est écoulé';
     } else {
         count--;
         t = setTimeout(countdown, 1000);
@@ -23,12 +22,10 @@ function countdown() {
 }
 
 function cdpause() {
-    // pauses countdown
     clearTimeout(t);
 }
 
 function cdreset() {
-    // resets countdown
     cdpause();
     count = CCOUNT;
     cddisplay();

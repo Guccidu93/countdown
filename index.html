@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Conutdown</title>
+    <title>Conutdown</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-<form id="frm">Seconds:
-    <input type="text" id="seconds" name="seconds" value="0" size="2" maxlength="2" />
+<div id="container">	
+<h1>COUNTDOWN</h1>	
+<form id="frm">Secondes:
+    <input type="text" id="secondes" name="secondes" value="0" size="1" maxlength="8" />
     <br/>
-    <input type="button" id="btnct" value="Input" />
+    <input class="button" type="button" id="btnct" value="ajouter" />
 </form>
-<span id="timespan"></span>
+<span id="decompte"></span><br />
 
-<input type="button" value="Start" onclick="countdown()">
-<input type="button" value="Stop" onclick="cdpause()">
-<input type="button" value="Reset" onclick="cdreset()">
+<input class="button" type="button" value="Start" onclick="countdown()">
+<input class="button" type="button" value="Pause" onclick="cdpause()">
+<input class="button" type="button" value="Reset" onclick="cdreset()">
+</div>
+
+
+
 </body>
 </html>
